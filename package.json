@@ -1,0 +1,30 @@
+{
+  "name": "webpack",
+  "version": "0.0.1",
+  "description": "A basic frontend webpack configuration settings",
+  "main": "webpack.settings.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexalemany/webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "frontend",
+    "postcss",
+    "babel"
+  ],
+  "author": "Alex Alemany",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexalemany/webpack/issues"
+  },
+  "homepage": "https://github.com/alexalemany/webpack#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "babel-loader": "^8.1.0",
+    "babel-preset-airbnb": "^5.0.0"
+  }
+}
