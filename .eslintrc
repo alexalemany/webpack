@@ -16,6 +16,7 @@
 	"rules": {
 	  "array-bracket-spacing": [ "error", "always" ],
 	  "arrow-spacing": "error",
+	  "max-len": ["error", { "ignoreComments": true }],
 	  "constructor-super": "error",
 	  "curly": "error",
 	  "indent": ["error", 4,  { "SwitchCase": 1 }],
