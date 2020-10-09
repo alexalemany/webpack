@@ -1,0 +1,49 @@
+{
+	"env": {
+	  "browser": true,
+	  "commonjs": true,
+	  "es6": true,
+	  "node": true
+	},
+	"parserOptions": {
+	  "parser": "babel-eslint",
+	  "sourceType": "module",
+	  "ecmaVersion": 2018
+	},
+	"extends": [
+	  "airbnb-base"
+	],
+	"rules": {
+	  "array-bracket-spacing": [ "error", "always" ],
+	  "arrow-spacing": "error",
+	  "constructor-super": "error",
+	  "curly": "error",
+	  "indent": ["error", 4,  { "SwitchCase": 1 }],
+	  "keyword-spacing": "error",
+	  "no-console": 0,
+	  "no-const-assign": "error",
+	  "no-debugger": 0,
+	  "no-duplicate-imports": "error",
+	  "no-multiple-empty-lines": [ 2, { "max": 2, "maxEOF": 1 } ],
+	  "no-this-before-super": "error",
+	  "no-unreachable": "error",
+	  "no-unused-vars": 0,
+	  "no-useless-escape": 0,
+	  "no-var": "error",
+	  "object-curly-spacing": [ "error", "always" ],
+	  "one-var": ["error",  { "var": "never", "let": "never", "const": "never" }],
+	  "prefer-arrow-callback": "error",
+	  "prefer-const": "error",
+	  "quotes": [ "error", "single", { "allowTemplateLiterals": true } ],
+	  "semi": ["error", "never"],
+	  "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+	  "space-before-function-paren": "error",
+	  "valid-typeof": "error",
+	  "import/no-extraneous-dependencies": ["error", {
+		"devDependencies": true,
+		"optionalDependencies": true,
+		"peerDependencies": true,
+		"packageDir": ["./node_modules/webpack-settings/", "./"]
+	  }]
+	}
+  }
