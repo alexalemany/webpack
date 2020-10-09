@@ -1,4 +1,4 @@
-module.exports = {
+ const settings = {
 	rules: {
 	  'at-rule-no-unknown': false,
 	  'block-no-empty': true,
@@ -32,3 +32,4 @@ module.exports = {
 	}
   }
   
+  module.exports = settings
