@@ -1,6 +1,6 @@
 const cssComment = require('postcss-comment')
 
-module.exports = {
+const settings = {
   parser: cssComment,
   plugins: {
     'postcss-easy-import': {},
@@ -27,3 +27,5 @@ module.exports = {
     cssnano: {},
   }
 }
+
+module.exports = settings
