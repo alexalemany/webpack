@@ -1,10 +1,12 @@
 {
-  "name": "webpack",
+  "name": "webpack-settings",
   "version": "0.0.1",
   "description": "A basic frontend webpack configuration settings",
-  "main": "webpack.settings.js",
+  "main": "/src/js/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "development": "webpack --mode development --config=webpack.settings.js --display-error-details",
+    "dev": "npm run development"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,41 @@
     "url": "https://github.com/alexalemany/webpack/issues"
   },
   "homepage": "https://github.com/alexalemany/webpack#readme",
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.11.6",
+    "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
-    "babel-preset-airbnb": "^5.0.0"
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-airbnb": "^5.0.0",
+    "copy-webpack-plugin": "^6.2.0",
+    "css-loader": "^4.3.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.1.0",
+    "mini-css-extract-plugin": "^0.12.0",
+    "postcss": "^7.0.0",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-bem": "^0.4.1",
+    "postcss-calc": "^7.0.5",
+    "postcss-color-function": "^4.1.0",
+    "postcss-comment": "^2.0.0",
+    "postcss-discard-empty": "^4.0.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^4.0.4",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^4.1.2",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-simple-extend": "^1.0.0",
+    "postcss-url": "^8.0.0",
+    "postcss-utilities": "^0.8.4",
+    "stylelint": "^13.7.2",
+    "stylelint-webpack-plugin": "^2.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
