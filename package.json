@@ -1,8 +1,8 @@
 {
   "name": "webpack-settings",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A basic frontend webpack configuration settings",
-  "main": "/src/js/index.js",
+  "main": "./webpack.settings.js",
   "scripts": {
     "test": "jest",
     "development": "webpack --mode development --config=webpack.settings.js --display-error-details",
