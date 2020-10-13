@@ -36,6 +36,9 @@ module.exports = webpack
 	"prod": "npm run production",
 	"production": "webpack --mode production  --hide-modules --config=webpack.config.js"
 },
+"devDependencies": {
+        "webpack-settings": "git@github.com:alexalemany/webpack-settings.git#semver:~v1.x.x"
+}
 // ...
 ```
 
