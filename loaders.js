@@ -49,7 +49,7 @@ const CSSLoader = {
             loader: 'postcss-loader',
             options: {
                 postcssOptions: {
-                    path: `${__dirname}/postcss.config.js`,
+                    config: `${__dirname}/postcss.config.js`,
                 },
             },
         },
