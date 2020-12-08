@@ -1,5 +1,5 @@
-# Webpack-Settings
-A basic frontend **webpack settings, -eslint, babel 7**. This package works as a dependency for your project.
+# Webpack-Config
+A basic frontend **webpack config, -eslint, babel 7**. This package works as a dependency for your project.
 
 There is a three kind of enviorment modes: Production, Development and Watch
 
@@ -8,7 +8,7 @@ To start working on you need to add into your project:
 `webpack.config.js` file with:
 ```javascript
 
-const webpack = require('webpack-settings/webpack.config.js')
+const webpack = require('webpack-config/webpack.config.js')
 const path = require('path')
 
 webpack.entry = {
@@ -46,7 +46,7 @@ Add proper configuration to visual studio to parse files with eslint plugin:
 ```javascript
 // ...
 "eslint.options": {
-    "configFile": "node_modules/webpack-settings/.eslintrc"
+    "configFile": "node_modules/webpack-config/.eslintrc"
 },
 // ...
 ```

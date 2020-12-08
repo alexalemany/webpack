@@ -1,6 +1,6 @@
 {
-  "name": "webpack-settings",
-  "version": "2.0.0",
+  "name": "webpack-config",
+  "version": "2.0.1",
   "description": "A basic webpack 5 utility",
   "main": "index.js",
   "scripts": {
