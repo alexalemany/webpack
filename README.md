@@ -1,5 +1,5 @@
 # Webpack-Settings
-A basic frontend **webpack settings, -eslint and stylesin, babel 7**. This package works as a dependency for your project.
+A basic frontend **webpack settings, -eslint, babel 7**. This package works as a dependency for your project.
 
 There is a three kind of enviorment modes: Production, Development and Watch
 
@@ -8,13 +8,12 @@ To start working on you need to add into your project:
 `webpack.config.js` file with:
 ```javascript
 
-const webpack = require('webpack-settings/webpack.settings.js')
+const webpack = require('webpack-settings/webpack.config.js')
 const path = require('path')
 
 webpack.entry = {
 	// name and input entry of your file
-	// this first js is a alias js/src/js/input-file-name.js
-	'name-of-your-output-file-name': 'js/src/js/input-file-name.js',
+	'name-of-your-output-file-name': '@/src/js/input-file-name.js',
 }
 
 webpack.output = {
@@ -30,24 +29,33 @@ module.exports = webpack
 ```javascript
 // ...
 "scripts": {
+	"watch": "npm run development -- --watch",
 	"dev": "npm run development",
 	"development": "webpack --mode development --config=webpack.config.js --display-error-details",
-	"watch": "npm run development -- --watch",
 	"prod": "npm run production",
 	"production": "webpack --mode production  --hide-modules --config=webpack.config.js"
 },
 "devDependencies": {
-        "webpack-settings": "git@github.com:alexalemany/webpack-settings.git#semver:~v1.x.x"
+    "webpack-config": "git@github.com:alexalemany/webpack-config.git#semver:~v1.x.x"
 }
 // ...
 ```
 
+Add proper configuration to visual studio to parse files with eslint plugin:
+
+```javascript
+// ...
+"eslint.options": {
+    "configFile": "node_modules/webpack-settings/.eslintrc"
+},
+// ...
+```
+
 This package works with:
-- **POSTCSS**
-Work with as a Saas project. You can check postcss.config.js and see witch pluggins we are using.
+- **SCSS**
 - **BABEL 7**
-- **BABEL LOADER with airbnb presets**
-You can check javascript style guide in [Airbnb jasvascript style guide](https://github.com/airbnb/javascript)
+- **BABEL LOADER with standard presets**
+You can check javascript style guide in [Jasvascript Standard style guide](https://standardjs.com/)
 
 ### Licence
 MIT License

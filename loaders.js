@@ -1,78 +1,38 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { MiniCssExtractPlugin } = require('./plugins')
 
 const JSLoader = {
-    test: /\.js$/,
-    use: {
-        loader: 'babel-loader',
-        options: {
-            presets: [ [ 'airbnb', {
-                targets: {
-                    chrome: 50,
-                    ie: 10,
-                    firefox: 45,
-                },
-            } ] ],
-        },
-    },
+    test: /\.(js)$/,
+    exclude: /node_modules/,
+    use: ['babel-loader'],
 }
 
-const ESLintLoader = {
-    test: /\.js$/,
-    enforce: 'pre',
-    use: {
-        loader: 'eslint-loader',
-        options: {
-            // eslint-disable-next-line prefer-template, no-path-concat
-            configFile: __dirname + '/.eslintrc',
-        },
-    },
-}
-
-const CSSLoader = {
-    test: /\.css$/,
+const SCSSLoader = {
+    test: /\.(scss|css)$/,
     use: [
-        {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-                // eslint-disable-next-line prefer-template, no-path-concat
-                publicPath: __dirname + './dist/css/',
-            },
-        },
-        {
-            loader: 'css-loader',
-            options: {
-                importLoaders: 1,
-                sourceMap: true,
-            },
-        },
-        {
-            loader: 'postcss-loader',
-            options: {
-                postcssOptions: {
-                    config: `${__dirname}/postcss.config.js`,
-                },
-            },
-        },
-    ],
+      MiniCssExtractPlugin.loader,
+      // Translates CSS into CommonJS
+      "css-loader",
+      // Compiles Sass to CSS
+      "sass-loader",
+    ]  
 }
 
 const IMAGESLoader = {
     test: /\.(png|ttf|woff|eot|svg|jpe?g|gif)$/,
     use: [
-        {
-            loader: 'file-loader',
-            options: {
-                outputPath: 'vendor-images',
-                publicPath: '../vendor-images',
-                name: '[name].[ext]',
-            },
+      {
+        loader: 'file-loader',
+        options: {
+            outputPath: 'vendor-images',
+            publicPath: 'vendor-images',
+            name: '[name].[ext]',
         },
-    ],
-}
+      },
+    ]
+  }
 
 module.exports = {
     JSLoader,
-    ESLintLoader,
+    SCSSLoader, 
     IMAGESLoader,
-    CSSLoader,
 }
