@@ -46,7 +46,7 @@ Add proper configuration to visual studio to parse files with eslint plugin:
 ```javascript
 // ...
 "eslint.options": {
-    "configFile": "node_modules/webpack-config/.eslintrc"
+	"configFile": "./node_modules/webpack-config/.eslintrc"
 },
 // ...
 ```

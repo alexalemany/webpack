@@ -1,9 +1,11 @@
 {
-    "presets": [["airbnb", {
+  "presets": [
+    ["@babel/preset-env", {
       "targets": {
-        "chrome": 50,
-        "ie": 11,
-        "firefox": 45
-      }
-    }]]
-  }
+          "chrome": 50,
+          "ie": 11,
+          "firefox": 45
+        }
+    }]
+  ]
+}
