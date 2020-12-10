@@ -31,9 +31,9 @@ module.exports = webpack
 "scripts": {
 	"watch": "npm run development -- --watch",
 	"dev": "npm run development",
-	"development": "webpack --mode development --config=webpack.config.js --display-error-details",
+	"development": "webpack --mode development --config=webpack.config.js",
 	"prod": "npm run production",
-	"production": "webpack --mode production  --hide-modules --config=webpack.config.js"
+	"production": "webpack --mode production --config webpack.config.js"
 },
 "devDependencies": {
     "webpack-config": "git@github.com:alexalemany/webpack-config.git#semver:~v1.x.x"
