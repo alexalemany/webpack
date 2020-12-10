@@ -20,7 +20,7 @@ const configuration = {
     plugins: [
         instance,
         new ESLintPlugin({
-            // overrideConfigFile: 'path/.eslintrc'
+            overrideConfigFile: path.resolve(__dirname, './.eslintrc') 
         })
     ]
 }
